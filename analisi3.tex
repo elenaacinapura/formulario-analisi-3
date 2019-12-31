@@ -98,9 +98,44 @@ Sia $\sum a_n$ con $a_n > 0$ una serie numerica
 \section{Serie di funzioni}
 Sia $\sum_k f_k(x)$ serie di funzioni convergente in $A$
 \begin{itemize}
-    \item convergenza totale vuol dire $\sum_k \sup_{x \in A} \left|f_k(x)\right| < \infty$
+    \item convergenza totale vuol dire $\sum_k \sup_{x \in A} \abs{f_k(x)} < \infty$
     \item test di Weiherstrass: se esiste successione reale $M_k$ t.c. $\left|f_k(x)\right| < M_k$ e $\sum M_k < \infty$ allora ho conv. tot.
 \end{itemize}
 \subsection{Serie di potenze}
+Sia $\sum c_k x^k$ serie di potenze.
+\begin{itemize}
+    \item esiste $R \in [0, +\infty]$ tale che la serie \\- se $\abs{x} < R$ conv. tot. in tutti i compatti $\subset (-R, R)$\\- diverge per $\abs{x} > R$\\ - nulla può dirsi per $\abs{x} = R$
+    \item Abel: se c'è conv. punt. anche per $x = R$, allora conv. unif. in $[-a, R] \subset (-R, R]$. Stessa cosa per $x=-R$ ma col segno meno, dai hai capito.
+    \item Cauchy-Hadamard per trovare $R$: \\ $R^{-1} = \limsup_{k\rightarrow \infty} \sqrt[k]{\abs{c_k}} = \limsup_{k \rightarrow \infty} \frac{\abs{c_{k+1}}}{\abs{c_k}}$
+    \item Serie derivate: sia $S(x) = \sum c_k x^k$. $S^n(x) = \sum (k+1)(k+2)\dots (k+n) c_{k+n} x^k$
+\end{itemize}
+
+\section{Convergenza integrali impropri}
+Le regole di confronto asintotico valgono solo per funzioni positive. Se ne hai una negativa prova con conv. assolusta.
+\subsection{I specie}
+Integrali di $f(x)$ limitata su intervalli illimitati, tipo $(- \infty, A]$, $[A, + \infty)$, $(-\infty, + \infty)$.
+\begin{itemize}
+    \item condizione necessaria $$\lim_ {x \rightarrow \infty} f(x) = 0$$
+    \item convergenza assoluta implica non assoluta
+    \item la funzione deve essere infinitesima rispetto a $1/x$, ovvero  all'infinito deve andare come $1/x^{\alpha}$ con $\alpha > 1$
+    \item caso particolare con i logaritmi: $$ \int_{a>1}^{+ \infty} \frac{1}{x^\alpha \log^\beta (x)} \dif x  =$$ \\$$
+    \begin{cases*}
+        < \infty \quad se~\alpha > 1, \forall \beta ~~ o ~~ \alpha = 1, \beta > 1 \\
+        + \infty \quad se~\alpha < 1, \forall \beta ~~ o ~~ \alpha = 1, \beta \leq 1
+    \end{cases*}$$
+\end{itemize}
+\subsection{II specie}
+Integrali di $f(x)$ illimitate su intervalli limitati. 
+\begin{itemize}
+    \item la funzione deve essere infinita rispetto a $1/x$, ovvero deve andare come $1/x^{\alpha}$ con $\alpha < 1$
+    \item caso particolare con i logaritmi:
+    $$ \int_0^{a<1} \frac{1}{x^\alpha \log^\beta (x)} \dif x  =$$ \\$$
+    \begin{cases*}
+        < \infty \quad se~\alpha < 1, \forall \beta ~~ o ~~ \alpha = 1, \beta > 1 \\
+        + \infty \quad se~\alpha > 1, \forall \beta ~~ o ~~ \alpha = 1, \beta \leq 1
+    \end{cases*}$$
+\end{itemize}
+
+\section{Integrazione secondo Lebesgue}
 
 \end{document}
