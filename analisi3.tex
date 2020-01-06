@@ -104,9 +104,9 @@ Sia $\sum_k f_k(x)$ serie di funzioni convergente in $A$
 \subsection{Serie di potenze}
 Sia $\sum c_k x^k$ serie di potenze.
 \begin{itemize}
-    \item esiste $R \in [0, +\infty]$ tale che la serie \\- se $\abs{x} < R$ conv. tot. in tutti i compatti $\subset (-R, R)$\\- diverge per $\abs{x} > R$\\ - nulla può dirsi per $\abs{x} = R$
-    \item Abel: se c'è conv. punt. anche per $x = R$, allora conv. unif. in $[-a, R] \subset (-R, R]$. Stessa cosa per $x=-R$ ma col segno meno, dai hai capito.
-    \item Cauchy-Hadamard per trovare $R$: \\ $R^{-1} = \limsup_{k\rightarrow \infty} \sqrt[k]{\abs{c_k}} = \limsup_{k \rightarrow \infty} \frac{\abs{c_{k+1}}}{\abs{c_k}}$
+    \item \textbf{Raggio di convergenza} $R \in [0, +\infty]$ tale che la serie \\- se $\abs{x} < R$ conv. tot. in tutti i compatti $\subset (-R, R)$\\- diverge per $\abs{x} > R$\\ - nulla può dirsi per $\abs{x} = R$
+    \item \textbf{Teorema di Abel} \\Se c'è conv. punt. anche per $x = R$, allora conv. unif. in $[-a, R] \subset (-R, R]$. Stessa cosa per $x=-R$ ma col segno meno, dai hai capito.
+    \item \textbf{Criterio di Cauchy-Hadamard} per trovare $R$: \\ $$R^{-1} = \limsup_{k\rightarrow \infty} \sqrt[k]{\abs{c_k}} $$ $$ = \limsup_{k \rightarrow \infty} \frac{\abs{c_{k+1}}}{\abs{c_k}}$$
     \item Serie derivate: sia $S(x) = \sum c_k x^k$. $S^n(x) = \sum (k+1)(k+2)\dots (k+n) c_{k+n} x^k$
 \end{itemize}
 
@@ -118,7 +118,7 @@ Integrali di $f(x)$ limitata su intervalli illimitati, tipo $(- \infty, A]$, $[A
     \item condizione necessaria $$\lim_ {x \rightarrow \infty} f(x) = 0$$
     \item convergenza assoluta implica non assoluta
     \item la funzione deve essere infinitesima rispetto a $1/x$, ovvero  all'infinito deve andare come $1/x^{\alpha}$ con $\alpha > 1$
-    \item caso particolare con i logaritmi: $$ \int_{a>1}^{+ \infty} \frac{1}{x^\alpha \log^\beta (x)} \dif x  =$$ \\$$
+    \item caso particolare con i logaritmi: $$ \int_{a>1}^{+ \infty} \frac{1}{x^\alpha \log^\beta (x)} \dif x  =$$ \\$$ = 
     \begin{cases*}
         < \infty \quad se~\alpha > 1, \forall \beta ~~ o ~~ \alpha = 1, \beta > 1 \\
         + \infty \quad se~\alpha < 1, \forall \beta ~~ o ~~ \alpha = 1, \beta \leq 1
@@ -127,15 +127,34 @@ Integrali di $f(x)$ limitata su intervalli illimitati, tipo $(- \infty, A]$, $[A
 \subsection{II specie}
 Integrali di $f(x)$ illimitate su intervalli limitati. 
 \begin{itemize}
-    \item la funzione deve essere infinita rispetto a $1/x$, ovvero deve andare come $1/x^{\alpha}$ con $\alpha < 1$
+    \item la funzione deve essere infinita rispetto a $1/x$, ovvero deve andare come $1/x^{\alpha}$ con $\alpha < 1$.
     \item caso particolare con i logaritmi:
-    $$ \int_0^{a<1} \frac{1}{x^\alpha \log^\beta (x)} \dif x  =$$ \\$$
+    $$ \int_0^{a<1} \frac{1}{x^\alpha \log^\beta (x)} \dif x  =$$ \\$$ = 
     \begin{cases*}
         < \infty \quad se~\alpha < 1, \forall \beta ~~ o ~~ \alpha = 1, \beta > 1 \\
         + \infty \quad se~\alpha > 1, \forall \beta ~~ o ~~ \alpha = 1, \beta \leq 1
     \end{cases*}$$
+    \item attenzione quando verifichi gli $\alpha$, se trovi che la funzione non è nemmeno infinita va benissimo!
 \end{itemize}
 
 \section{Integrazione secondo Lebesgue}
-
+\begin{itemize}
+    \item \textbf{Teorema convergenza monotona} \\ Sia $\{ f_n(x) \} \in L^1$ successione \underline{monotona q.o.} e sia $$\abs{\int f_n \dif x} \leq M~\forall n \in \mathbb{N}$$ allora $ \exists f \in L^1$ tale che $$f_n \rightarrow f~ in~ L^1~e~f\rightarrow f~q.o.$$
+    \item \textbf{Teorema convergenza dominata}\\ Abbiamo una successione di funzioni \underline{integrabili} tali che $$ L^1 \ni f_n(x) \rightarrow f(x)~q.o.$$ e dominate da una funzione integrabile, ovvero $\exists~g(x)$ tale che $$ \abs{f_n(x)} \leq g(x) \in L^1~\forall x$$ allora $$\Rightarrow f(x) \in L^1 ~ e ~ fn(x) \rightarrow f~in~L^1$$
+    \item \textbf{Teorema di Fatou}\\ Abbiamo una successione di funzioni \underline{integrabili non negative} $L^1 \ni f_n(x) \geq 0$ e tali che $$f_n(x) \rightarrow f(x)~q.o.$$ $$\int f_n(x) \dif x \leq M~\forall n\in \mathbb{N}$$ allora $$ \Rightarrow f\in L^1~e~\int f(x) \dif x \leq M$$ 
+    \item \textbf{Da $\mathbf{L^1_{loc}}$ a $\mathbf{L^1}$}\\Sia $f\in L^1_{loc}$ e $g\in L^1$, se $$\abs{f} \leq g \Rightarrow f\in L^1$$
+    \item Def: \textbf{Funzione misurabile} \\ Una funzione $f:\mathbb{R}^n \rightarrow \mathbb{R}$ è misurabile se $$\forall I\subset \mathbb{R}~mis.~ \Rightarrow f^{-1}(I)~mis.$$ 
+    \item \textbf{Misurabilià e integrabilità}\\ Sia $f$ misurabile; se esiste $g\in L^1_{loc}$ tale che $\abs{f} \leq g$, allora $f\in L^1_{loc}$
+    \item \textbf{Fubini}\\ Sia $f(x) \in L^1(\mathbb{R}^n)$ e vedo $\mathbb{R}^n = \mathbb{R}^{d_1} \times \mathbb{R}^{d_1}$ Allora gli integrali parziali di $f$ rispetto a un insieme sono definiti quasi ovunque e ottengo l'integrale di $f$ in $\mathbb{R}^{n}$ facendo l'integrale iterato, che deve risultare uguale in tutti gli ordini possibili.
+    \item \textbf{Tonelli}\\ Sia $f\in \mathbb{R}^n$ \underline{misurabile} e sia \underline{almeno uno} di $$ \int \limits_{\mathbb{R}^{d_2}} \dif y \int \limits_{\mathbb{R}^{d_1}} \abs{f(x, y)} \dif x \leq \infty $$ $$o~quello~inverito~\leq \infty$$ allora $$f\in L^1$$ e ne faccio l'integrale iterato secondo Fubini.
+\end{itemize}
+\section{Serie di Fourier}
+\begin{itemize}
+    \item Data $f$ periodica in $[A, B]$ con periodo $T$, la sua serie di Fourier è $$ \frac{a_0}{2} + \sum_{k=1}^{\infty} \Big (a_k \cos(kx) + b_l \sin(kx)\Big)$$ con $$ a_k = \frac{2}{T} \int_A^B f(x) \cos(kx) \dif x$$ $$ b_k = \frac{2}{T} \int_A^B f(x) \sin(kx) \dif x$$ !!! ATTENTA ALLE $k$
+    \item \textbf{Convergenza puntuale} della serie se $f \in L^1$ sull'insieme dove è periodica e vale alternativamente:\\ - $\exists M> 0~t.c.~ \abs{f(x+c) - f(x)} \geq M\abs{c}$ all'interno di un intorno $(x - \delta, x + \delta)$\\ - $\frac{f(x+c) - f(x)}{c} \in L^1$ nell'intervallo di periodicità.\\
+    Chiaramente se la funzione è derivabile c'è convergenza puntuale.\\
+    Attenzione che se c'è un salto la serie converge al valore a metà $\frac{f(x^-) + f(x^+)}{2}$
+    \item \textbf{Convergenza uniforme} della serie se $f\in C^1$ a tratti nell'intervallo di periodicità. Però $f$ è discontinua non posso avere conv. uniforme.
+    \item \textbf{Convergenza in $\mathbf{L^1}$} se $f \in L^2$. In tal caso vale la \underline{uguaglianza di Parseval} $$ \frac 2 T \int_A^B \abs{f(x)}^2 \dif x = $$ $$ = \frac{\abs{a_0}^2}{2} +  \sum_{k=1}{\infty} \Big( \abs{a_k}^2 + \abs{b_k}^2 \Big)$$
+\end{itemize}
 \end{document}
