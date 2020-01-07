@@ -38,8 +38,9 @@ $$\cot\left(\frac{\alpha}{2}\right) = {\frac{1 + \cos(\alpha)}{\sin(\alpha)}}$$
 $$\sin(\alpha)\sin(\beta) = \frac{1}{2} \left[\cos(\alpha - \beta) - \cos(\alpha + \beta)\right]$$
 $$\cos(\alpha)\cos(\beta) = \frac{1}{2} \left[\cos(\alpha - \beta) + \cos(\alpha + \beta)\right]$$
 $$\sin(\alpha)\cos(\beta) = \frac{1}{2} \left[\sin(\alpha - \beta) + \sin(\alpha + \beta)\right]$$
+\hrule
 
-\section{Derivate fondamentali}
+\section{Derivate dimenticabili}
 $$ (\tan(x))' = 1 + \tan^2(x) = \sec^2(x)$$
 $$ (\arcsin(x))' = \frac{1}{\sqrt{1 - x^2}}$$
 $$ (\arccos(x))' = - \frac{1}{\sqrt{1 - x^2}}$$
@@ -49,6 +50,7 @@ $$ (\csc(x))' = -\cot(x)\csc(x)$$
 $$ (\cot^n(x))' = - n \cdot \csc(x) \cdot \sec(x) \cdot \cot^n (x)$$
 $$ (a^x)' = a^x \ln(a)$$
 $$ (\log_a~x )' = \frac{1}{x\ln(a)}$$
+\hrule
 
 \section{Roba iperbolica}
 $$ \sinh(x) = \frac{e^x - e^{-x}}{2} $$
@@ -57,8 +59,10 @@ $$ \cosh^2(x) - \sinh^2(x) = 1 $$
 $$ (\cosh(x))' = \sinh(x)$$
 $$ \quad (\sinh(x))' = \cosh(x) $$
 
+
 \section{Disuguaglianze utili}
 $$ \abs{xy} \leq \frac{1}{2}\left(x^2 + y^2\right) $$
+\hrule
 
 \section{Sviluppi in serie}
 $$ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + o(x^3)$$
@@ -70,6 +74,29 @@ $$ \arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} + o(x^6)$$
 $$ \frac{1}{1-x} = 1 + x + x^2 + x^3 + o(x^3)$$
 $$(1 + x) ^ \alpha = 1 + \alpha x + \frac{\alpha (\alpha - 1)x^2}{2!} + \dots $$
 $$ + \frac{\alpha(\alpha - 1)\dots (\alpha - n - 1) x^n}{n!} + o(x^n) $$
+\hrule
+
+\section{Integrali cattivi}
+$$ \int \sin^2(x) \dif x = \frac{1}{2} (x - \sin(x) \cos(x)) $$
+$$ \int \sin^3(x) \dif x = \frac{1}{12} (\cos(3x)-9\cos(x)) $$
+$$ \int \sin^4(x) \dif x = \frac{1}{32} (12x - 8\sin(2x)+\sin(4x)) $$ 
+$$ \int \cos^2(x) \dif x = \frac{1}{2} (x + \sin(x)\cos(x)) $$
+$$ \int \cos^3(x) \dif x = \frac{1}{12} (\sin(3x) + 9\sin(x))$$
+$$ \int \cos^4(x) \dif x = \frac{1}{32} (12 x + 8\sin(2x)+\sin(4x))$$
+$$ \int \sin(x) \cos(x) \dif x = -\frac{1}{2} \cos^2(x) $$ 
+$$ \int \tan(x) = -\ln(\cos(x)) $$
+$$ \int \sec(x) \dif x = \ln (\tan(x) + \sec(x)) $$
+$$ \int \sec^2(x) \dif x = \tan(x) $$
+$$ \int \csc (x) \dif x = \ln \left( \tan\left(\frac{x}{2}\right)\right)$$
+$$ \int \csc^2(x) \dif x = \cot(x) $$
+$$ \int \arctan(x) \dif x = x \arctan(x) - \frac{1}{2} \ln (1 + x^2)$$
+$$ \int \sqrt{a - x^2} \dif x = $$ $$ = \frac{x}{2} \sqrt{a - x^2} + \frac{a}{2} \arcsin \left(\frac {x}{a}\right) = $$
+$$ =  \frac{x}{2} \sqrt{a - x^2} + \frac{a}{2} \arctan \left(\frac{x}{\sqrt{a-x^2}}\right) $$
+$$ \int \sqrt{a + x^2} \dif x =  \frac{x}{2} \sqrt{a + x^2} + $$ 
+$$ + \frac{a}{2} \ln \abs{x + \sqrt{a+x^2}} $$
+$$ \int \frac{1}{\sqrt{x^2 + a^2}}\dif x = \log{\abs{\sqrt{x^2 + a^2} + x}}$$
+$$ \int \frac{1}{\sqrt{a^2 - x^2}}\dif x = \cot \Big(\frac{x}{\sqrt{a-x^2}}\Big) = $$ $$ = \csc \Big( \frac{x}{\sqrt{a}}\Big)$$
+\hrule
 
 \section{Successioni di funzioni}
 Sia $\left\{ f_n(x)\right\}$ successione tendente puntualmente a $f(x)$ in $A\subset \mathbb{R}$
@@ -82,6 +109,7 @@ Sia $\left\{ f_n(x)\right\}$ successione tendente puntualmente a $f(x)$ in $A\su
     \item se $f_n$ integrabili e $f_n\rightrightarrows f$, allora $\lim_{n\rightarrow \infty} \int_A f_n(x) \dif x = \int_A f \dif x$ (puoi usarlo al contrario eventualmente)
     \item se $f_n \in C^1$, $f_n\rightrightarrows f$ e $\frac{\dif f_n}{\dif x} \rightrightarrows g$, allora $\lim_{n\rightarrow \infty} \frac{\dif f_n}{\dif x} = \frac{\dif f}{\dif x}$ 
 \end{itemize}
+\hrule
 
 \section{Serie numeriche}
 Sia $\sum a_n$ con $a_n > 0$ una serie numerica
@@ -94,6 +122,7 @@ Sia $\sum a_n$ con $a_n > 0$ una serie numerica
     \item $\sum \frac{1}{n^\alpha} < \infty$ per $\alpha > 1$
     
 \end{itemize}
+\hrule
 
 \section{Serie di funzioni}
 Sia $\sum_k f_k(x)$ serie di funzioni convergente in $A$
@@ -109,6 +138,7 @@ Sia $\sum c_k x^k$ serie di potenze.
     \item \textbf{Criterio di Cauchy-Hadamard} per trovare $R$: \\ $$R^{-1} = \limsup_{k\rightarrow \infty} \sqrt[k]{\abs{c_k}} $$ $$ = \limsup_{k \rightarrow \infty} \frac{\abs{c_{k+1}}}{\abs{c_k}}$$
     \item Serie derivate: sia $S(x) = \sum c_k x^k$. $S^n(x) = \sum (k+1)(k+2)\dots (k+n) c_{k+n} x^k$
 \end{itemize}
+\hrule
 
 \section{Convergenza integrali impropri}
 Le regole di confronto asintotico valgono solo per funzioni positive. Se ne hai una negativa prova con conv. assolusta.
@@ -136,7 +166,7 @@ Integrali di $f(x)$ illimitate su intervalli limitati.
     \end{cases*}$$
     \item attenzione quando verifichi gli $\alpha$, se trovi che la funzione non è nemmeno infinita va benissimo!
 \end{itemize}
-
+\hrule
 \section{Integrazione secondo Lebesgue}
 \begin{itemize}
     \item \textbf{Teorema convergenza monotona} \\ Sia $\{ f_n(x) \} \in L^1$ successione \underline{monotona q.o.} e sia $$\abs{\int f_n \dif x} \leq M~\forall n \in \mathbb{N}$$ allora $ \exists f \in L^1$ tale che $$f_n \rightarrow f~ in~ L^1~e~f\rightarrow f~q.o.$$
@@ -146,15 +176,20 @@ Integrali di $f(x)$ illimitate su intervalli limitati.
     \item Def: \textbf{Funzione misurabile} \\ Una funzione $f:\mathbb{R}^n \rightarrow \mathbb{R}$ è misurabile se $$\forall I\subset \mathbb{R}~mis.~ \Rightarrow f^{-1}(I)~mis.$$ 
     \item \textbf{Misurabilià e integrabilità}\\ Sia $f$ misurabile; se esiste $g\in L^1_{loc}$ tale che $\abs{f} \leq g$, allora $f\in L^1_{loc}$
     \item \textbf{Fubini}\\ Sia $f(x) \in L^1(\mathbb{R}^n)$ e vedo $\mathbb{R}^n = \mathbb{R}^{d_1} \times \mathbb{R}^{d_1}$ Allora gli integrali parziali di $f$ rispetto a un insieme sono definiti quasi ovunque e ottengo l'integrale di $f$ in $\mathbb{R}^{n}$ facendo l'integrale iterato, che deve risultare uguale in tutti gli ordini possibili.
-    \item \textbf{Tonelli}\\ Sia $f\in \mathbb{R}^n$ \underline{misurabile} e sia \underline{almeno uno} di $$ \int \limits_{\mathbb{R}^{d_2}} \dif y \int \limits_{\mathbb{R}^{d_1}} \abs{f(x, y)} \dif x \leq \infty $$ $$o~quello~inverito~\leq \infty$$ allora $$f\in L^1$$ e ne faccio l'integrale iterato secondo Fubini.
+    \item \textbf{Tonelli}\\ Sia $f\in \mathbb{R}^n$ \underline{misurabile} e sia \underline{almeno uno} di $$ \int \limits_{\mathbb{R}^{d_2}} \dif y \int \limits_{\mathbb{R}^{d_1}} \abs{f(x, y)} \dif x \leq \infty $$ $$ \text{o quello inverito}~\leq \infty$$ allora $$f\in L^1$$ e ne faccio l'integrale iterato secondo Fubini.
 \end{itemize}
+\hrule
 \section{Serie di Fourier}
+Sia $f$ una funzione periodica nell'intervallo $[x_1, x_2]$, con periodo $T = x_2 - x_1$. La sua serie di Fourier è $$ \frac{a_0}{2} + \sum_{k=1}^{\infty} \Big (a_k \cos(kx) + b_l \sin(kx)\Big)$$ 
+con 
+$$a_0 = \frac 2 T \int_{x_1}^{x_2} f(x) \dif x$$
+$$ a_k = \frac{2}{T} \int_{x_1}^{x_2} f(x) \cos(k\frac{2\pi}{T}x) \dif x$$ $$ b_k = \frac{2}{T} \int_{x_1}^{x_2} f(x) \sin(k\frac{2\pi}{T}x) \dif x$$ !!! ATTENTA ALLE $k$ e alla pulsazione quando integri !!!
 \begin{itemize}
-    \item Data $f$ periodica in $[A, B]$ con periodo $T$, la sua serie di Fourier è $$ \frac{a_0}{2} + \sum_{k=1}^{\infty} \Big (a_k \cos(kx) + b_l \sin(kx)\Big)$$ con $$ a_k = \frac{2}{T} \int_A^B f(x) \cos(kx) \dif x$$ $$ b_k = \frac{2}{T} \int_A^B f(x) \sin(kx) \dif x$$ !!! ATTENTA ALLE $k$
-    \item \textbf{Convergenza puntuale} della serie se $f \in L^1$ sull'insieme dove è periodica e vale alternativamente:\\ - $\exists M> 0~t.c.~ \abs{f(x+c) - f(x)} \geq M\abs{c}$ all'interno di un intorno $(x - \delta, x + \delta)$\\ - $\frac{f(x+c) - f(x)}{c} \in L^1$ nell'intervallo di periodicità.\\
-    Chiaramente se la funzione è derivabile c'è convergenza puntuale.\\
-    Attenzione che se c'è un salto la serie converge al valore a metà $\frac{f(x^-) + f(x^+)}{2}$
+    \item Se $f$ è \underline{pari}, allora tutti i  $b_k = 0$\\Se $f$ è \underline{dispari}, allora tutti gli $a_k = 0$.
+    \item \textbf{Convergenza puntuale} della serie se $f \in L^1$ sull'insieme dove è periodica e vale almeno una delle due:\\ - $\exists M> 0~t.c.~ \abs{f(x+c) - f(x)} \geq M\abs{c}$ all'interno di un intorno $(x - \delta, x + \delta)$\\ - $\frac{f(x+c) - f(x)}{c} \in L^1$ nell'intervallo di periodicità.\\
+    Se la funzione è regolare a tratti, ovvero derivabile a tratti, c'è convergenza puntuale (ma è un'ipotesi più forte)\\
+    Attenzione che se c'è un salto la serie converge al \underline{valore a metà} $\frac{f(x^-) + f(x^+)}{2}$
     \item \textbf{Convergenza uniforme} della serie se $f\in C^1$ a tratti nell'intervallo di periodicità. Però $f$ è discontinua non posso avere conv. uniforme.
-    \item \textbf{Convergenza in $\mathbf{L^1}$} se $f \in L^2$. In tal caso vale la \underline{uguaglianza di Parseval} $$ \frac 2 T \int_A^B \abs{f(x)}^2 \dif x = $$ $$ = \frac{\abs{a_0}^2}{2} +  \sum_{k=1}{\infty} \Big( \abs{a_k}^2 + \abs{b_k}^2 \Big)$$
+    \item \textbf{Convergenza in $\mathbf{L^1}$} se $f \in L^2$. In tal caso vale la \underline{uguaglianza di Parseval} $$ \frac 2 T \int_{x_1}^{x_2} \abs{f(x)}^2 \dif x = $$ $$ = \frac{\abs{a_0}^2}{2} +  \sum_{k=1}^{\infty} \Big( \abs{a_k}^2 + \abs{b_k}^2 \Big)$$
 \end{itemize}
 \end{document}
