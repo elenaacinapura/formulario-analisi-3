@@ -79,10 +79,8 @@ $$ + \frac{\alpha(\alpha - 1)\dots (\alpha - n - 1) x^n}{n!} + o(x^n) $$
 \section{Integrali cattivi}
 $$ \int \sin^2(x) \dif x = \frac{1}{2} (x - \sin(x) \cos(x)) $$
 $$ \int \sin^3(x) \dif x = \frac{1}{12} (\cos(3x)-9\cos(x)) $$
-$$ \int \sin^4(x) \dif x = \frac{1}{32} (12x - 8\sin(2x)+\sin(4x)) $$ 
 $$ \int \cos^2(x) \dif x = \frac{1}{2} (x + \sin(x)\cos(x)) $$
 $$ \int \cos^3(x) \dif x = \frac{1}{12} (\sin(3x) + 9\sin(x))$$
-$$ \int \cos^4(x) \dif x = \frac{1}{32} (12 x + 8\sin(2x)+\sin(4x))$$
 $$ \int \sin(x) \cos(x) \dif x = -\frac{1}{2} \cos^2(x) $$ 
 $$ \int \tan(x) = -\ln(\cos(x)) $$
 $$ \int \sec(x) \dif x = \ln (\tan(x) + \sec(x)) $$
@@ -96,7 +94,7 @@ $$ \int \sqrt{a + x^2} \dif x =  \frac{x}{2} \sqrt{a + x^2} + $$
 $$ + \frac{a}{2} \ln \abs{x + \sqrt{a+x^2}} $$
 $$ \int \frac{1}{\sqrt{x^2 + a^2}}\dif x = \log{\abs{\sqrt{x^2 + a^2} + x}}$$
 $$ \int \frac{1}{\sqrt{a^2 - x^2}}\dif x = \cot \Big(\frac{x}{\sqrt{a-x^2}}\Big) = $$ $$ = \csc \Big( \frac{x}{\sqrt{a}}\Big)$$
-\hrule
+
 
 \section{Successioni di funzioni}
 Sia $\left\{ f_n(x)\right\}$ successione tendente puntualmente a $f(x)$ in $A\subset \mathbb{R}$
@@ -169,8 +167,8 @@ Integrali di $f(x)$ illimitate su intervalli limitati.
 \hrule
 \section{Integrazione secondo Lebesgue}
 \begin{itemize}
-    \item \textbf{Teorema convergenza monotona} \\ Sia $\{ f_n(x) \} \in L^1$ successione \underline{monotona q.o.} e sia $$\abs{\int f_n \dif x} \leq M~\forall n \in \mathbb{N}$$ allora $ \exists f \in L^1$ tale che $$f_n \rightarrow f~ in~ L^1~e~f\rightarrow f~q.o.$$
-    \item \textbf{Teorema convergenza dominata}\\ Abbiamo una successione di funzioni \underline{integrabili} tali che $$ L^1 \ni f_n(x) \rightarrow f(x)~q.o.$$ e dominate da una funzione integrabile, ovvero $\exists~g(x)$ tale che $$ \abs{f_n(x)} \leq g(x) \in L^1~\forall x$$ allora $$\Rightarrow f(x) \in L^1 ~ e ~ fn(x) \rightarrow f~in~L^1$$
+    \item \textbf{Teorema convergenza monotona} \\ Sia $\{ f_n(x) \} \in L^1$ successione \underline{monotona q.o.} e sia $$\abs{\int f_n \dif x} \leq M~\forall n \in \mathbb{N}$$ allora $ \exists f \in L^1$ tale che $f_n \rightarrow f~ in~ L^1~e~f\rightarrow f~q.o.$
+    \item \textbf{Teorema convergenza dominata}\\ Abbiamo una successione di funzioni \underline{integrabili} tali che $$ L^1 \ni f_n(x) \rightarrow f(x)~q.o.$$ e dominate da una funzione integrabile, ovvero $\exists~g(x)$ tale che $$ \abs{f_n(x)} \leq g(x) \in L^1~\forall x$$ allora $\Rightarrow f(x) \in L^1 ~ e ~ f_n(x) \rightarrow f~in~L^1$
     \item \textbf{Teorema di Fatou}\\ Abbiamo una successione di funzioni \underline{integrabili non negative} $L^1 \ni f_n(x) \geq 0$ e tali che $$f_n(x) \rightarrow f(x)~q.o.$$ $$\int f_n(x) \dif x \leq M~\forall n\in \mathbb{N}$$ allora $$ \Rightarrow f\in L^1~e~\int f(x) \dif x \leq M$$ 
     \item \textbf{Da $\mathbf{L^1_{loc}}$ a $\mathbf{L^1}$}\\Sia $f\in L^1_{loc}$ e $g\in L^1$, se $$\abs{f} \leq g \Rightarrow f\in L^1$$
     \item Def: \textbf{Funzione misurabile} \\ Una funzione $f:\mathbb{R}^n \rightarrow \mathbb{R}$ è misurabile se $$\forall I\subset \mathbb{R}~mis.~ \Rightarrow f^{-1}(I)~mis.$$ 
@@ -180,16 +178,18 @@ Integrali di $f(x)$ illimitate su intervalli limitati.
 \end{itemize}
 \hrule
 \section{Serie di Fourier}
-Sia $f$ una funzione periodica nell'intervallo $[x_1, x_2]$, con periodo $T = x_2 - x_1$. La sua serie di Fourier è $$ \frac{a_0}{2} + \sum_{k=1}^{\infty} \Big (a_k \cos(kx) + b_l \sin(kx)\Big)$$ 
+Sia $f$ una funzione periodica nell'intervallo $[x_1, x_2]$, con periodo $T = x_2 - x_1$ e pulsazione $\omega = \frac{2\pi}{T}$. La sua serie di Fourier è $$ \frac{a_0}{2} + \sum_{k=1}^{\infty} \Big (a_k \cos(k\omega x) + b_l \sin(k\omega x)\Big)$$ 
 con 
 $$a_0 = \frac 2 T \int_{x_1}^{x_2} f(x) \dif x$$
-$$ a_k = \frac{2}{T} \int_{x_1}^{x_2} f(x) \cos(k\frac{2\pi}{T}x) \dif x$$ $$ b_k = \frac{2}{T} \int_{x_1}^{x_2} f(x) \sin(k\frac{2\pi}{T}x) \dif x$$ !!! ATTENTA ALLE $k$ e alla pulsazione quando integri !!!
+$$ a_k = \frac{2}{T} \int_{x_1}^{x_2} f(x) \cos(k\omega x) \dif x$$ $$ b_k = \frac{2}{T} \int_{x_1}^{x_2} f(x) \sin(k\omega x) \dif x$$ \\
+In forma complessa si scrive: $$ \sum_{k=-\infty}^{+\infty} c_k e^{ik\omega x}, ~ c_k = \frac 1 T \int_{x_1}^{x_2} f(x) e^{ik\omega x} \dif x$$
 \begin{itemize}
     \item Se $f$ è \underline{pari}, allora tutti i  $b_k = 0$\\Se $f$ è \underline{dispari}, allora tutti gli $a_k = 0$.
     \item \textbf{Convergenza puntuale} della serie se $f \in L^1$ sull'insieme dove è periodica e vale almeno una delle due:\\ - $\exists M> 0~t.c.~ \abs{f(x+c) - f(x)} \geq M\abs{c}$ all'interno di un intorno $(x - \delta, x + \delta)$\\ - $\frac{f(x+c) - f(x)}{c} \in L^1$ nell'intervallo di periodicità.\\
     Se la funzione è regolare a tratti, ovvero derivabile a tratti, c'è convergenza puntuale (ma è un'ipotesi più forte)\\
     Attenzione che se c'è un salto la serie converge al \underline{valore a metà} $\frac{f(x^-) + f(x^+)}{2}$
     \item \textbf{Convergenza uniforme} della serie se $f\in C^1$ a tratti nell'intervallo di periodicità. Però $f$ è discontinua non posso avere conv. uniforme.
-    \item \textbf{Convergenza in $\mathbf{L^1}$} se $f \in L^2$. In tal caso vale la \underline{uguaglianza di Parseval} $$ \frac 2 T \int_{x_1}^{x_2} \abs{f(x)}^2 \dif x = $$ $$ = \frac{\abs{a_0}^2}{2} +  \sum_{k=1}^{\infty} \Big( \abs{a_k}^2 + \abs{b_k}^2 \Big)$$
+    \item \textbf{Convergenza in $\mathbf{L^2}$} se $f \in L^2$. In tal caso vale la \underline{uguaglianza di Parseval} $$ \frac 2 T \int_{x_1}^{x_2} \abs{f(x)}^2 \dif x = $$ $$ = \frac{\abs{a_0}^2}{2} +  \sum_{k=1}^{\infty} \Big( \abs{a_k}^2 + \abs{b_k}^2 \Big)$$
+    $$ \frac 2 T \int_{x_1}^{x_2} \abs{f(x)}^2 \dif x  = \sum_{k=-\infty}^{+\infty} \abs{c_k}^2$$
 \end{itemize}
 \end{document}
